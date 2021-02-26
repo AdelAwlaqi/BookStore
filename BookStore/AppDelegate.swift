@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreData
+import RealmSwift
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL as Any)
+  
+//        let data = BookObject()
+//        data.title = "How to Be Good"
+//        data.author = "adel Kazme"
+//        data.bookID = 1233
+//        data.date = Date()
+//        data.price = 20
+//        data.quantity = 11
+//        data.bookImg = "https://images-na.ssl-images-amazon.com/images/I/51lsqrb3VmL.jpg"
+        
+        do {
+           let _ = try Realm()
+//            try realm.write {
+//                realm.add(data)
+//            }
+        } catch {
+            print("Error initialising new realm, \(error)")
+        }
+        
         return true
     }
 

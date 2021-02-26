@@ -3,29 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12D75B3CA21895F8F9C0B516 /* Pods_BookStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7DB48166D00CDD7618B837 /* Pods_BookStore.framework */; };
+		DD6FCEB925E7FAD000619EF6 /* ViewAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6FCEB825E7FAD000619EF6 /* ViewAllVC.swift */; };
+		DD74591D25E67E1500B039AB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74591C25E67E1500B039AB /* HomeVC.swift */; };
 		DD84789225E587720085B3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84789125E587720085B3BA /* AppDelegate.swift */; };
 		DD84789425E587720085B3BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84789325E587720085B3BA /* SceneDelegate.swift */; };
-		DD84789625E587720085B3BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84789525E587720085B3BA /* ViewController.swift */; };
 		DD84789925E587720085B3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD84789725E587720085B3BA /* Main.storyboard */; };
 		DD84789C25E587720085B3BA /* BookStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD84789A25E587720085B3BA /* BookStore.xcdatamodeld */; };
 		DD84789E25E587750085B3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD84789D25E587750085B3BA /* Assets.xcassets */; };
 		DD8478A125E587750085B3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD84789F25E587750085B3BA /* LaunchScreen.storyboard */; };
+		DD8478AB25E5EE440085B3BA /* OffersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD8478AA25E5EE440085B3BA /* OffersCell.xib */; };
+		DD8478AE25E5EE530085B3BA /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8478AD25E5EE530085B3BA /* OffersCell.swift */; };
+		DD8478B125E5F22D0085B3BA /* BookObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8478B025E5F22C0085B3BA /* BookObject.swift */; };
+		DD986B8625E85EB30096E44E /* AddEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD986B8525E85EB30096E44E /* AddEditVC.swift */; };
+		DDA79F3425E9394000D6E3F4 /* BookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA79F3325E9394000D6E3F4 /* BookVC.swift */; };
+		DDFA3BC525E6B1BC0039AF84 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFA3BC425E6B1BC0039AF84 /* SearchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		245E03C9F3481471A1E4A92B /* Pods-BookStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookStore.debug.xcconfig"; path = "Target Support Files/Pods-BookStore/Pods-BookStore.debug.xcconfig"; sourceTree = "<group>"; };
+		A151F87C41203B90D3D4E77D /* Pods-BookStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookStore.release.xcconfig"; path = "Target Support Files/Pods-BookStore/Pods-BookStore.release.xcconfig"; sourceTree = "<group>"; };
+		DA7DB48166D00CDD7618B837 /* Pods_BookStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD6FCEB825E7FAD000619EF6 /* ViewAllVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllVC.swift; sourceTree = "<group>"; };
+		DD74591C25E67E1500B039AB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		DD84788E25E587720085B3BA /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD84789125E587720085B3BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD84789325E587720085B3BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD84789525E587720085B3BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD84789825E587720085B3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD84789B25E587720085B3BA /* BookStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookStore.xcdatamodel; sourceTree = "<group>"; };
 		DD84789D25E587750085B3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD8478A025E587750085B3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD8478A225E587750085B3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD8478AA25E5EE440085B3BA /* OffersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OffersCell.xib; sourceTree = "<group>"; };
+		DD8478AD25E5EE530085B3BA /* OffersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
+		DD8478B025E5F22C0085B3BA /* BookObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookObject.swift; sourceTree = "<group>"; };
+		DD986B8525E85EB30096E44E /* AddEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditVC.swift; sourceTree = "<group>"; };
+		DDA79F3325E9394000D6E3F4 /* BookVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVC.swift; sourceTree = "<group>"; };
+		DDFA3BC425E6B1BC0039AF84 /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12D75B3CA21895F8F9C0B516 /* Pods_BookStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F5058CEA668A879435A4AD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA7DB48166D00CDD7618B837 /* Pods_BookStore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A71F07AF4167FDA6586C1AA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				245E03C9F3481471A1E4A92B /* Pods-BookStore.debug.xcconfig */,
+				A151F87C41203B90D3D4E77D /* Pods-BookStore.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DD84788525E587720085B3BA = {
 			isa = PBXGroup;
 			children = (
 				DD84789025E587720085B3BA /* BookStore */,
 				DD84788F25E587720085B3BA /* Products */,
+				A71F07AF4167FDA6586C1AA3 /* Pods */,
+				5F5058CEA668A879435A4AD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +98,37 @@
 			children = (
 				DD84789125E587720085B3BA /* AppDelegate.swift */,
 				DD84789325E587720085B3BA /* SceneDelegate.swift */,
-				DD84789525E587720085B3BA /* ViewController.swift */,
 				DD84789725E587720085B3BA /* Main.storyboard */,
+				DD986B8925E85EDA0096E44E /* Controllers */,
+				DD986B8825E85EC50096E44E /* Xibs */,
+				DD8478B025E5F22C0085B3BA /* BookObject.swift */,
 				DD84789D25E587750085B3BA /* Assets.xcassets */,
 				DD84789F25E587750085B3BA /* LaunchScreen.storyboard */,
 				DD8478A225E587750085B3BA /* Info.plist */,
 				DD84789A25E587720085B3BA /* BookStore.xcdatamodeld */,
 			);
 			path = BookStore;
+			sourceTree = "<group>";
+		};
+		DD986B8825E85EC50096E44E /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				DD8478AA25E5EE440085B3BA /* OffersCell.xib */,
+				DD8478AD25E5EE530085B3BA /* OffersCell.swift */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		DD986B8925E85EDA0096E44E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDFA3BC425E6B1BC0039AF84 /* SearchVC.swift */,
+				DD986B8525E85EB30096E44E /* AddEditVC.swift */,
+				DD6FCEB825E7FAD000619EF6 /* ViewAllVC.swift */,
+				DD74591C25E67E1500B039AB /* HomeVC.swift */,
+				DDA79F3325E9394000D6E3F4 /* BookVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD8478A525E587750085B3BA /* Build configuration list for PBXNativeTarget "BookStore" */;
 			buildPhases = (
+				1EAFF6C31E108D40978F11FF /* [CP] Check Pods Manifest.lock */,
 				DD84788A25E587720085B3BA /* Sources */,
 				DD84788B25E587720085B3BA /* Frameworks */,
 				DD84788C25E587720085B3BA /* Resources */,
+				5C6CE433DBC106042BCF5FA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8478AB25E5EE440085B3BA /* OffersCell.xib in Resources */,
 				DD8478A125E587750085B3BA /* LaunchScreen.storyboard in Resources */,
 				DD84789E25E587750085B3BA /* Assets.xcassets in Resources */,
 				DD84789925E587720085B3BA /* Main.storyboard in Resources */,
@@ -135,15 +199,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EAFF6C31E108D40978F11FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BookStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C6CE433DBC106042BCF5FA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookStore/Pods-BookStore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BookStore/Pods-BookStore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookStore/Pods-BookStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD84788A25E587720085B3BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD84789625E587720085B3BA /* ViewController.swift in Sources */,
+				DD8478AE25E5EE530085B3BA /* OffersCell.swift in Sources */,
 				DD84789225E587720085B3BA /* AppDelegate.swift in Sources */,
+				DD8478B125E5F22D0085B3BA /* BookObject.swift in Sources */,
+				DDA79F3425E9394000D6E3F4 /* BookVC.swift in Sources */,
+				DD74591D25E67E1500B039AB /* HomeVC.swift in Sources */,
 				DD84789C25E587720085B3BA /* BookStore.xcdatamodeld in Sources */,
 				DD84789425E587720085B3BA /* SceneDelegate.swift in Sources */,
+				DD986B8625E85EB30096E44E /* AddEditVC.swift in Sources */,
+				DDFA3BC525E6B1BC0039AF84 /* SearchVC.swift in Sources */,
+				DD6FCEB925E7FAD000619EF6 /* ViewAllVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +399,14 @@
 		};
 		DD8478A625E587750085B3BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 245E03C9F3481471A1E4A92B /* Pods-BookStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7S8PCJ345;
 				INFOPLIST_FILE = BookStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,12 +420,14 @@
 		};
 		DD8478A725E587750085B3BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A151F87C41203B90D3D4E77D /* Pods-BookStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A7S8PCJ345;
 				INFOPLIST_FILE = BookStore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
