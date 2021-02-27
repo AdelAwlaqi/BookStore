@@ -32,15 +32,30 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RbU-QG-xd9">
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="290.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 ريال" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGV-ZP-gtb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="40" id="um8-Fu-6tB"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" red="0.10526848580000001" green="0.79166346789999997" blue="0.66590297220000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mhg-1A-bAe">
+                                                                <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 ريال" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGV-ZP-gtb">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="80" id="3yl-oY-fHw"/>
+                                                                            <constraint firstAttribute="height" constant="40" id="um8-Fu-6tB"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="0.10526848580000001" green="0.79166346789999997" blue="0.66590297220000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 نسخة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whr-1U-cF6">
+                                                                        <rect key="frame" x="90" y="0.0" width="300" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="v06-sX-xx3"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                        <color key="textColor" systemColor="systemPinkColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Love Hate Thing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RWJ-AV-kqc">
                                                                 <rect key="frame" x="0.0" y="50" width="398" height="100"/>
                                                                 <constraints>
@@ -59,7 +74,8 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="WFk-0I-5KO" secondAttribute="trailing" id="3PV-lX-3pc"/>
-                                                            <constraint firstAttribute="trailing" secondItem="uGV-ZP-gtb" secondAttribute="trailing" id="WZH-e4-SbW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Mhg-1A-bAe" secondAttribute="trailing" constant="8" id="GWP-gM-PVq"/>
+                                                            <constraint firstItem="Mhg-1A-bAe" firstAttribute="leading" secondItem="RbU-QG-xd9" secondAttribute="leading" id="Wj3-1x-azX"/>
                                                             <constraint firstItem="WFk-0I-5KO" firstAttribute="leading" secondItem="RbU-QG-xd9" secondAttribute="leading" id="bNb-xV-Qst"/>
                                                             <constraint firstItem="RWJ-AV-kqc" firstAttribute="leading" secondItem="RbU-QG-xd9" secondAttribute="leading" id="hzQ-Lk-hSL"/>
                                                             <constraint firstAttribute="trailing" secondItem="RWJ-AV-kqc" secondAttribute="trailing" id="n3i-T9-xtv"/>
@@ -83,6 +99,9 @@
                                                                         <state key="normal" title="-">
                                                                             <color key="titleColor" red="0.0" green="0.54529482129999995" blue="0.59250676629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="decreasePressed:" destination="dlR-Iy-Diy" eventType="touchUpInside" id="Et5-Gq-cdT"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nL4-ko-J2y">
                                                                         <rect key="frame" x="123" y="0.0" width="61.5" height="100"/>
@@ -96,6 +115,9 @@
                                                                         <state key="normal" title="+">
                                                                             <color key="titleColor" red="0.0" green="0.54529482129999995" blue="0.59250676629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="increasePressed:" destination="dlR-Iy-Diy" eventType="touchUpInside" id="IlD-ff-o6t"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" red="0.75309327411167515" green="0.75309327411167515" blue="0.75309327411167515" alpha="0.20834225171232876" colorSpace="custom" customColorSpace="sRGB"/>
@@ -115,6 +137,9 @@
                                                                 <state key="normal" title="أضف للسلة">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="addPressed:" destination="dlR-Iy-Diy" eventType="touchUpInside" id="wMB-g7-97S"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -163,9 +188,14 @@
                     <connections>
                         <outlet property="authorLbl" destination="WFk-0I-5KO" id="qA3-cV-LWr"/>
                         <outlet property="bookImg" destination="L1L-zO-48z" id="ceH-3b-9FE"/>
+                        <outlet property="counterLbl" destination="nL4-ko-J2y" id="Njl-Xi-qYe"/>
+                        <outlet property="decreaseBtn" destination="aTH-if-7Sk" id="hy6-rQ-aTc"/>
+                        <outlet property="increaseBtn" destination="irU-P4-BBi" id="VHc-AU-P14"/>
                         <outlet property="priceLbl" destination="uGV-ZP-gtb" id="z4R-eS-qP9"/>
+                        <outlet property="quantityLbl" destination="whr-1U-cF6" id="LIc-RY-l4G"/>
                         <outlet property="titleLbl" destination="RWJ-AV-kqc" id="cjX-Ko-EBa"/>
                         <segue destination="dRU-k6-92T" kind="show" identifier="toEdit" id="FJ9-MC-OG8"/>
+                        <segue destination="nHD-Jd-mX2" kind="show" identifier="toCart" id="PYX-wl-6t2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xB-pI-MTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -411,22 +441,16 @@
                                     <searchBar contentMode="redraw" placeholder="البحث باسم الكتاب" translatesAutoresizingMaskIntoConstraints="NO" id="sEx-YD-DY0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="6vD-CI-q5S" id="EK1-4f-j5L"/>
-                                        </connections>
                                     </searchBar>
                                     <searchBar contentMode="redraw" placeholder="البحث برقم الكتاب" translatesAutoresizingMaskIntoConstraints="NO" id="Jym-zS-NHe">
                                         <rect key="frame" x="0.0" y="59" width="414" height="56"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="6vD-CI-q5S" id="eio-7D-9FL"/>
-                                        </connections>
                                     </searchBar>
                                     <searchBar contentMode="redraw" placeholder="البحث بإسم المؤلف" translatesAutoresizingMaskIntoConstraints="NO" id="84M-VL-xNz">
                                         <rect key="frame" x="0.0" y="118" width="414" height="56"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <outlet property="delegate" destination="6vD-CI-q5S" id="CE1-UG-c6a"/>
+                                            <outlet property="delegate" destination="6vD-CI-q5S" id="Y8k-B5-fdG"/>
                                         </connections>
                                     </searchBar>
                                 </subviews>
@@ -458,9 +482,9 @@
                     <navigationItem key="navigationItem" title="البحث" id="iMD-C0-M7a"/>
                     <connections>
                         <outlet property="collectionView" destination="VmS-xa-JQN" id="sLt-JQ-bmL"/>
-                        <outlet property="searchAuthor" destination="84M-VL-xNz" id="O0Y-qD-6AK"/>
-                        <outlet property="searchID" destination="Jym-zS-NHe" id="TAH-ad-E4a"/>
-                        <outlet property="searchName" destination="sEx-YD-DY0" id="0SZ-g2-1cD"/>
+                        <outlet property="searchAuthor" destination="84M-VL-xNz" id="rXO-MS-jnj"/>
+                        <outlet property="searchID" destination="Jym-zS-NHe" id="om8-iL-dLC"/>
+                        <outlet property="searchName" destination="sEx-YD-DY0" id="vI4-Zf-euZ"/>
                         <segue destination="dlR-Iy-Diy" kind="show" identifier="toBook" id="6GV-I7-c2D"/>
                     </connections>
                 </viewController>
@@ -475,7 +499,7 @@
                     <tabBarItem key="tabBarItem" title="الرئيسية" image="house.fill" catalog="system" id="vcf-ha-MFa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="zzq-e7-o8J">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textShadowColor" red="0.0" green="0.54529482129999995" blue="0.59250676629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -596,7 +620,7 @@
         <!--سلة الكتب-->
         <scene sceneID="QtN-pf-3YP">
             <objects>
-                <viewController id="nHD-Jd-mX2" sceneMemberID="viewController">
+                <viewController id="nHD-Jd-mX2" customClass="CartVC" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yeb-oG-PMn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -604,7 +628,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dCh-Wa-Z8e">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yme-wz-Aaz">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yme-wz-Aaz">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="563"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
@@ -1032,7 +1056,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="FJ9-MC-OG8"/>
-        <segue reference="7jo-CH-FgD"/>
+        <segue reference="PYX-wl-6t2"/>
+        <segue reference="6GV-I7-c2D"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
@@ -1042,6 +1067,9 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

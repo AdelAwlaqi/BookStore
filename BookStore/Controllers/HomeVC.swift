@@ -14,6 +14,7 @@ class HomeVC : UIViewController {
     //variables:
     var selectedBook : BookObject?
     var books : Results<BookObject>?
+    var newBooks : Results<BookObject>?
     let realm = try! Realm()
 
     
@@ -31,22 +32,28 @@ class HomeVC : UIViewController {
             collectionView2.register(UINib(nibName: "OffersCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         }
     }
-    @IBOutlet weak var collectionView3: UICollectionView! {
-        didSet {
-            
-            collectionView3.delegate = self ;collectionView3.dataSource = self
-            collectionView3.register(UINib(nibName: "OffersCell", bundle: nil), forCellWithReuseIdentifier: "cell")
-        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadMovies()
+        loadBooks()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name("reloadData"), object: nil)
     }
     
-    func loadMovies() {
-        books  = realm.objects(BookObject.self)
+    @objc func reloadData() {
+        books = nil
+        newBooks = nil
         collectionView1.reloadData()
+        collectionView2.reloadData()
+        loadBooks()
+
+    }
+    
+    func loadBooks() {
+        books  = realm.objects(BookObject.self).sorted(byKeyPath: "title", ascending: true)
+        newBooks  = realm.objects(BookObject.self).sorted(byKeyPath: "date", ascending: false)
+        collectionView1.reloadData()
+        collectionView2.reloadData()
         
     }
     
@@ -69,10 +76,7 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         if collectionView.tag == 1 {
             return books!.count }
         if collectionView.tag == 2 {
-            return 2 }
-        if collectionView.tag == 3 {
-            return 2 }
-        
+            return newBooks!.count }
         return 1
     }
     
@@ -80,15 +84,11 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         if collectionView.tag == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OffersCell
             cell.configureCell(book: books![indexPath.row])
-            print(books?.count)
             return cell
         }
         if collectionView.tag == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OffersCell
-            return cell
-        }
-        if collectionView.tag == 3 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! OffersCell
+            cell.configureCell(book: newBooks![indexPath.row])
             return cell
         }
         
@@ -115,7 +115,10 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectedBook = books![indexPath.row]
+        if collectionView.tag == 1 {
+            selectedBook = books![indexPath.row] }
+        if collectionView.tag == 2 {
+            selectedBook = newBooks![indexPath.row] }
         performSegue(withIdentifier: "toBook", sender: self)
     }
     

@@ -47,6 +47,7 @@ class AddEditVC : UIViewController {
             newBook.bookID = Int(bookIDTxt.text!) ?? 1
             newBook.price = Int(priceTxt.text!) ?? 1
             newBook.quantity = Int(quantityTxt.text!) ?? 1
+            newBook.date = Date()
     }
         save(book: newBook)
         navigationController?.popToRootViewController(animated: true)
@@ -86,6 +87,7 @@ class AddEditVC : UIViewController {
             bookIDTxt.text = selectedBook?.bookID.description
             quantityTxt.text = selectedBook?.quantity.description
             bookImgLinkTxt.text = selectedBook?.bookImg
+//            selectedBook?.date = Date()
             uploadEditButton.setTitle("تعديل", for: .normal)
             uploadEditButton.backgroundColor = #colorLiteral(red: 0, green: 0.5452948213, blue: 0.5925067663, alpha: 1)
               }
@@ -96,8 +98,11 @@ class AddEditVC : UIViewController {
         let alert = UIAlertController(title: "حذف الكتاب؟", message: "هل أنت متأكد من حذف الكتاب؟", preferredStyle: .alert)
         let action = UIAlertAction(title: "نعم", style: .destructive) { (action) in
             self.delete(book: self.selectedBook!)
+            self.navigationController?.popToRootViewController(animated: true)
+            NotificationCenter.default.post(name: NSNotification.Name("reloadData"), object: nil, userInfo: nil)
         }
         alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
 }
