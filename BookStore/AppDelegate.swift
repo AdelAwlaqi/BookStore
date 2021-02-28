@@ -20,17 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print(Realm.Configuration.defaultConfiguration.fileURL as Any)
   
-//        let data = BookObject()
-//        data.title = "How to Be Good"
-//        data.author = "adel Kazme"
-//        data.bookID = 1233
-//        data.date = Date()
-//        data.price = 20
-//        data.quantity = 11
-//        data.bookImg = "https://images-na.ssl-images-amazon.com/images/I/51lsqrb3VmL.jpg"
+//        let data = CartObject()
+//        let book = BookObject()
+//        book.title = "How to Be Good"
+//        book.author = "adel Kazme"
+//        book.bookID = 1233
+//        book.date = Date()
+//        book.price = 20
+//        book.quantity = 11
+//        book.bookImg = "https://images-na.ssl-images-amazon.com/images/I/51lsqrb3VmL.jpg"
+//
+//        
         
         do {
            let _ = try Realm()
+//            data.addItem(book: book)
 //            try realm.write {
 //                realm.add(data)
 //            }

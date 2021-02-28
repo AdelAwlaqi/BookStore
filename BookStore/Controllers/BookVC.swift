@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import RealmSwift
 
 class BookVC : UIViewController {
     
@@ -19,11 +20,14 @@ class BookVC : UIViewController {
     @IBOutlet weak var increaseBtn: UIButton!
     @IBOutlet weak var counterLbl: UILabel!
     
+    
     var selectedBook: BookObject?
     var counter = 1
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let notEmpty = selectedBook {
         titleLbl.text = notEmpty.title
         if let url = URL(string: notEmpty.bookImg){
@@ -34,8 +38,12 @@ class BookVC : UIViewController {
         priceLbl.text = notEmpty.price.description + " ريال "
         authorLbl.text = notEmpty.author
             quantityLbl.text = "\(notEmpty.quantity) نسخة"
+           
         }
+        checkQuantity()
     }
+    
+
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,8 +51,15 @@ class BookVC : UIViewController {
             destinationVC.selectedBook = selectedBook
         }
         if let destinationVC2 = segue.destination as? CartVC {
-            destinationVC2.selectedBook = selectedBook
-            destinationVC2.num = counter
+            do {
+                try realm.write {
+                    selectedBook?.numCopy = counter
+                    selectedBook?.added = true
+                }
+            } catch {
+                print("Error saving book \(error)")
+            }
+           
         }
     }
     
@@ -52,16 +67,21 @@ class BookVC : UIViewController {
         performSegue(withIdentifier: "toEdit", sender: self)
     }
     
+    
     func checkQuantity() {
-        if counter == 1 {
+        
+        if selectedBook!.quantity <= counter || counter == 1 {
             decreaseBtn.isEnabled = false
         } else {decreaseBtn.isEnabled = true}
-         if counter == 10 {
+        
+         if counter >= selectedBook!.quantity {
             increaseBtn.isEnabled = false
+            decreaseBtn.isEnabled = true
         } else {
             increaseBtn.isEnabled = true
         }
     }
+    
     
     @IBAction func decreasePressed(_ sender: Any) {
         counter -= 1
@@ -77,9 +97,23 @@ class BookVC : UIViewController {
     
 
     @IBAction func addPressed(_ sender: Any) {
+
+        do {
+            try realm.write {
+                selectedBook?.numCopy = counter
+                selectedBook?.added = true
+            }
+        } catch {
+            print("Error saving book \(error)")
+        }
         
-        performSegue(withIdentifier: "toCart", sender: self)
+        let alert = UIAlertController(title: "تم الاضافة بنجاح", message: "هل تريد انهاء عملية الشراء", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "الانتقال للسلة", style: .default) { (action) in
+            self.performSegue(withIdentifier: "toCart", sender: self)
+        })
+        alert.addAction(UIAlertAction(title: "متابعة التسوق", style: .cancel) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        })
+        present(alert, animated: true, completion: nil)
     }
-    
-    
 }

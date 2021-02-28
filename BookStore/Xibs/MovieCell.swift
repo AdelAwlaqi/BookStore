@@ -12,10 +12,11 @@ import RealmSwift
 class MovieCell: UITableViewCell {
     
     //Outlets :
-    @IBOutlet weak var movieImg: UIImageView!
-    @IBOutlet weak var movieLbl: UILabel!
-    @IBOutlet weak var movieTypeLbl: UILabel!
-    @IBOutlet weak var movieRateLbl: UILabel!
+    @IBOutlet weak var bookImg: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var authorLbl: UILabel!
+    @IBOutlet weak var priceLbl: UILabel!
+    @IBOutlet weak var copyLbl: UILabel!
 
    //Variables :
     var bookObj : BookObject?
@@ -28,17 +29,17 @@ class MovieCell: UITableViewCell {
 
     
     func configureCell(bookObject: BookObject) {
-//        movieLbl.text = movieObject.movieName
-//        if let url = URL(string: movieObject.movieImgLink){
-//            let placeholder = UIImage(named: "inside")
-//            let options : KingfisherOptionsInfo = [.transition(.fade(0.3))]
-//        movieImg.kf.setImage(with: url , placeholder: placeholder , options: options )
-//        }
-////        cell.movieImg.image = movies[indexPath.row].movieImgName
-//        movieTypeLbl.text = "\(movieObject.movieType1) \(movieObject.movieType2 ) \(movieObject.movieType3)"
-//        movieRateLbl.text = String(movieObject.movieRate )
-//
-//
+        titleLbl.text = bookObject.title
+        if let url = URL(string: bookObject.bookImg){
+            let placeholder = UIImage(named: "placeholder")
+            let options : KingfisherOptionsInfo = [.transition(.fade(0.3))]
+        bookImg.kf.setImage(with: url , placeholder: placeholder , options: options )
+        }
+        authorLbl.text = bookObject.author
+        priceLbl.text = bookObject.price.description
+        copyLbl.text = bookObject.numCopy.description
+
+
     }
 
 }

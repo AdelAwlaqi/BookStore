@@ -18,5 +18,8 @@ class BookObject : Object {
     @objc dynamic var price : Int = 0
     @objc dynamic var quantity : Int = 0
     @objc dynamic var date : Date?
+    @objc dynamic var numCopy : Int = 0
+    @objc dynamic var added : Bool = false
+    
 
 }

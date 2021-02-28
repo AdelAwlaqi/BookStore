@@ -521,7 +521,7 @@
                     <tabBarItem key="tabBarItem" title="البحث" image="magnifyingglass" catalog="system" id="b0y-4r-eFs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7IN-mn-kxP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -536,7 +536,7 @@
         <!--اضافة كتاب جديد-->
         <scene sceneID="xgB-ES-9d5">
             <objects>
-                <viewController id="PSn-yh-xJ6" sceneMemberID="viewController">
+                <viewController id="PSn-yh-xJ6" customClass="SettingsVC" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DoR-qu-8Mb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -578,6 +578,9 @@
                                                 <integer key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="twitterPressed:" destination="PSn-yh-xJ6" eventType="touchUpInside" id="yWY-he-TjQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -605,7 +608,7 @@
                     <tabBarItem key="tabBarItem" title="اضافة كتاب" image="plus" catalog="system" id="c7F-Qe-bKM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ANy-hA-jyk">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -739,7 +742,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="Ge0-Uj-3rp" kind="show" id="4y9-pQ-6LH"/>
+                                                            <action selector="buyPressed:" destination="nHD-Jd-mX2" eventType="touchUpInside" id="3Lx-Uv-nyf"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -770,6 +773,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="سلة الكتب" id="ryp-R4-ysi"/>
+                    <connections>
+                        <outlet property="priceLbl" destination="qnm-UJ-imA" id="RVC-a4-d3A"/>
+                        <outlet property="shippingLbl" destination="irn-H3-F3h" id="r0L-5w-e4n"/>
+                        <outlet property="tableView" destination="Yme-wz-Aaz" id="W0c-lR-hvv"/>
+                        <outlet property="totalLbl" destination="6OO-sM-oOm" id="eVf-UL-ozM"/>
+                        <segue destination="Ge0-Uj-3rp" kind="presentation" identifier="toInvoice" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="NnK-ru-a9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COz-t1-Hwt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -778,20 +788,81 @@
         <!--فاتورة الشراء-->
         <scene sceneID="Qjw-ly-7sa">
             <objects>
-                <viewController id="Ge0-Uj-3rp" sceneMemberID="viewController">
+                <viewController id="Ge0-Uj-3rp" customClass="InvoiceVC" customModule="BookStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ea-pg-2SJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kgf-8L-kqn">
+                                <rect key="frame" x="0.0" y="60" width="414" height="720"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bvB-ek-1Uh">
+                                <rect key="frame" x="16" y="796" width="382" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFh-3n-wpU">
+                                        <rect key="frame" x="0.0" y="0.0" width="188.5" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.54529482129999995" blue="0.59250676629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rYl-cF-yri"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="37"/>
+                                        <state key="normal" title="تصوير الشاشة">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takeScreenshot:" destination="Ge0-Uj-3rp" eventType="touchUpInside" id="NeQ-7q-qez"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQa-pK-atx">
+                                        <rect key="frame" x="193.5" y="0.0" width="188.5" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.54529482129999995" blue="0.59250676629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7FJ-Sx-fPT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="37"/>
+                                        <state key="normal" title="انهاء">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="dismissPressed:" destination="Ge0-Uj-3rp" eventType="touchUpInside" id="P3X-e5-E78"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="skw-a4-dXb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kgf-8L-kqn" firstAttribute="trailing" secondItem="skw-a4-dXb" secondAttribute="trailing" id="6Ao-Wv-7M9"/>
+                            <constraint firstItem="skw-a4-dXb" firstAttribute="bottom" secondItem="bvB-ek-1Uh" secondAttribute="bottom" constant="16" id="6ag-sQ-Mi4"/>
+                            <constraint firstItem="bvB-ek-1Uh" firstAttribute="top" secondItem="Kgf-8L-kqn" secondAttribute="bottom" constant="16" id="MH8-Sn-LLf"/>
+                            <constraint firstItem="skw-a4-dXb" firstAttribute="trailing" secondItem="bvB-ek-1Uh" secondAttribute="trailing" constant="16" id="MRC-Xx-dwe"/>
+                            <constraint firstItem="Kgf-8L-kqn" firstAttribute="top" secondItem="skw-a4-dXb" secondAttribute="top" constant="16" id="Mzy-Dp-p7p"/>
+                            <constraint firstItem="bvB-ek-1Uh" firstAttribute="leading" secondItem="skw-a4-dXb" secondAttribute="leading" constant="16" id="s07-wM-nWc"/>
+                            <constraint firstItem="Kgf-8L-kqn" firstAttribute="leading" secondItem="skw-a4-dXb" secondAttribute="leading" id="zq1-6S-sCx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="فاتورة الشراء" id="LAe-hH-tou">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="I2N-dm-2vL"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Kgf-8L-kqn" id="tEZ-RW-seg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7w5-m4-dji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8333" y="-670"/>
+            <point key="canvasLocation" x="8331.8840579710159" y="-670.3125"/>
         </scene>
         <!--إضافة/تعديل كتاب-->
         <scene sceneID="lLZ-E8-CbZ">
@@ -1041,7 +1112,7 @@
                     <tabBarItem key="tabBarItem" title="السلة" image="cart.fill" catalog="system" id="Qi1-Iw-2gb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Wh3-IZ-QBC">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1055,7 +1126,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FJ9-MC-OG8"/>
+        <segue reference="BEU-bd-9ER"/>
         <segue reference="PYX-wl-6t2"/>
         <segue reference="6GV-I7-c2D"/>
     </inferredMetricsTieBreakers>

@@ -63,13 +63,9 @@ class SearchVC : UIViewController  {
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destinationVC = segue.destination as? SearchType {
-//            destinationVC.delegate = self
-//        }
-//        if let destinationVC2 = segue.destination as? SearchRate {
-//            destinationVC2.delegate = self
-//            print("Im Delegate")
-//        }
+        if let destinationVC = segue.destination as? BookVC {
+            destinationVC.selectedBook = selectedBook
+        }
     }
 
     
@@ -87,6 +83,7 @@ extension SearchVC : UISearchBarDelegate, UICollectionViewDelegateFlowLayout, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedBook = books![indexPath.row]
         performSegue(withIdentifier: "toBook", sender: self)
     }
 

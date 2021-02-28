@@ -91,6 +91,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLbl" destination="H3y-y4-g0E" id="IJy-Qx-BJM"/>
+                <outlet property="bookImg" destination="ZW0-s1-4QV" id="EGC-ED-4R9"/>
+                <outlet property="copyLbl" destination="lxS-gQ-2VB" id="dLS-1K-kQ8"/>
+                <outlet property="priceLbl" destination="Wmx-wy-mMD" id="Oh6-CP-Pn4"/>
+                <outlet property="titleLbl" destination="XK0-0j-JZA" id="4Dz-aH-s6t"/>
+            </connections>
             <point key="canvasLocation" x="239.85507246376812" y="155.02232142857142"/>
         </tableViewCell>
     </objects>

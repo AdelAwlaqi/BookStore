@@ -10,6 +10,7 @@
 		12D75B3CA21895F8F9C0B516 /* Pods_BookStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7DB48166D00CDD7618B837 /* Pods_BookStore.framework */; };
 		DD6FCEB925E7FAD000619EF6 /* ViewAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6FCEB825E7FAD000619EF6 /* ViewAllVC.swift */; };
 		DD74591D25E67E1500B039AB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74591C25E67E1500B039AB /* HomeVC.swift */; };
+		DD787CAD25EBE7DF00C3E85E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD787CAC25EBE7DF00C3E85E /* SettingsVC.swift */; };
 		DD84789225E587720085B3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84789125E587720085B3BA /* AppDelegate.swift */; };
 		DD84789425E587720085B3BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84789325E587720085B3BA /* SceneDelegate.swift */; };
 		DD84789925E587720085B3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD84789725E587720085B3BA /* Main.storyboard */; };
@@ -20,6 +21,9 @@
 		DD8478AE25E5EE530085B3BA /* OffersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8478AD25E5EE530085B3BA /* OffersCell.swift */; };
 		DD8478B125E5F22D0085B3BA /* BookObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8478B025E5F22C0085B3BA /* BookObject.swift */; };
 		DD986B8625E85EB30096E44E /* AddEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD986B8525E85EB30096E44E /* AddEditVC.swift */; };
+		DD9E229A25EBD75200A78E63 /* InvoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E229825EBD75100A78E63 /* InvoiceCell.swift */; };
+		DD9E229B25EBD75200A78E63 /* InvoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD9E229925EBD75100A78E63 /* InvoiceCell.xib */; };
+		DD9E229F25EBD9FA00A78E63 /* InvoiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9E229E25EBD9FA00A78E63 /* InvoiceVC.swift */; };
 		DDA491B425E9BF800051BD27 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA491B325E9BF800051BD27 /* CartVC.swift */; };
 		DDA491BD25E9C3C70051BD27 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA491BB25E9C3C70051BD27 /* MovieCell.swift */; };
 		DDA491BE25E9C3C70051BD27 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDA491BC25E9C3C70051BD27 /* MovieCell.xib */; };
@@ -33,6 +37,7 @@
 		DA7DB48166D00CDD7618B837 /* Pods_BookStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6FCEB825E7FAD000619EF6 /* ViewAllVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAllVC.swift; sourceTree = "<group>"; };
 		DD74591C25E67E1500B039AB /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		DD787CAC25EBE7DF00C3E85E /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		DD84788E25E587720085B3BA /* BookStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD84789125E587720085B3BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD84789325E587720085B3BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +50,9 @@
 		DD8478AD25E5EE530085B3BA /* OffersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCell.swift; sourceTree = "<group>"; };
 		DD8478B025E5F22C0085B3BA /* BookObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookObject.swift; sourceTree = "<group>"; };
 		DD986B8525E85EB30096E44E /* AddEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditVC.swift; sourceTree = "<group>"; };
+		DD9E229825EBD75100A78E63 /* InvoiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceCell.swift; sourceTree = "<group>"; };
+		DD9E229925EBD75100A78E63 /* InvoiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceCell.xib; sourceTree = "<group>"; };
+		DD9E229E25EBD9FA00A78E63 /* InvoiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceVC.swift; sourceTree = "<group>"; };
 		DDA491B325E9BF800051BD27 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		DDA491BB25E9C3C70051BD27 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		DDA491BC25E9C3C70051BD27 /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
@@ -119,6 +127,8 @@
 		DD986B8825E85EC50096E44E /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				DD9E229825EBD75100A78E63 /* InvoiceCell.swift */,
+				DD9E229925EBD75100A78E63 /* InvoiceCell.xib */,
 				DDA491BB25E9C3C70051BD27 /* MovieCell.swift */,
 				DDA491BC25E9C3C70051BD27 /* MovieCell.xib */,
 				DD8478AA25E5EE440085B3BA /* OffersCell.xib */,
@@ -131,7 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				DDFA3BC425E6B1BC0039AF84 /* SearchVC.swift */,
+				DD9E229E25EBD9FA00A78E63 /* InvoiceVC.swift */,
 				DD986B8525E85EB30096E44E /* AddEditVC.swift */,
+				DD787CAC25EBE7DF00C3E85E /* SettingsVC.swift */,
 				DD6FCEB825E7FAD000619EF6 /* ViewAllVC.swift */,
 				DD74591C25E67E1500B039AB /* HomeVC.swift */,
 				DDA79F3325E9394000D6E3F4 /* BookVC.swift */,
@@ -204,6 +216,7 @@
 				DD84789E25E587750085B3BA /* Assets.xcassets in Resources */,
 				DD84789925E587720085B3BA /* Main.storyboard in Resources */,
 				DDA491BE25E9C3C70051BD27 /* MovieCell.xib in Resources */,
+				DD9E229B25EBD75200A78E63 /* InvoiceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,9 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9E229A25EBD75200A78E63 /* InvoiceCell.swift in Sources */,
 				DD8478AE25E5EE530085B3BA /* OffersCell.swift in Sources */,
 				DDA491B425E9BF800051BD27 /* CartVC.swift in Sources */,
 				DDA491BD25E9C3C70051BD27 /* MovieCell.swift in Sources */,
+				DD9E229F25EBD9FA00A78E63 /* InvoiceVC.swift in Sources */,
 				DD84789225E587720085B3BA /* AppDelegate.swift in Sources */,
 				DD8478B125E5F22D0085B3BA /* BookObject.swift in Sources */,
 				DDA79F3425E9394000D6E3F4 /* BookVC.swift in Sources */,
@@ -268,6 +283,7 @@
 				DD986B8625E85EB30096E44E /* AddEditVC.swift in Sources */,
 				DDFA3BC525E6B1BC0039AF84 /* SearchVC.swift in Sources */,
 				DD6FCEB925E7FAD000619EF6 /* ViewAllVC.swift in Sources */,
+				DD787CAD25EBE7DF00C3E85E /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
